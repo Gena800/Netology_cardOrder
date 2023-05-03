@@ -75,7 +75,7 @@ public class validationCheck {
         driver.findElement(By.cssSelector("[data-test-id=\"phone\"] input")).sendKeys("+79876543210");
 
         driver.findElement(By.className("button")).click();
-        String expected = "/*Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй*/";
+        String expected = "Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй";
         String actual = driver.findElement(By.cssSelector("[data-test-id=\"agreement\"] .checkbox__text")).getText().trim();
         assertEquals(expected, actual);
 
